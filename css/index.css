@@ -1,0 +1,395 @@
+.box {
+  position: relative;
+  max-width: 1366px;
+  width: 100%;
+}
+.box .beijing {
+  width: 100%;
+  height: 100% ;
+  background-color: #323841;
+  position: absolute;
+  z-index: 3;
+  display: none;
+}
+.box .beijing .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 4;
+  border-radius: 50%;
+  background-image: url("../images/背景.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+.box .nav_left {
+  width: 140px;
+  float: left;
+  position: fixed;
+  height: 1000px;
+  background-color: #323841;
+  z-index: 2;
+}
+.box .nav_left .bigPic {
+  width: 200px;
+  position: absolute;
+  display: none;
+}
+.box .nav_left .bigPic img {
+  width: 100%;
+  display: none;
+}
+.box .nav_left .bigPic .show {
+  display: block;
+}
+.box .nav_left .logo {
+  width: 100%;
+  color: white;
+}
+.box .nav_left .nav {
+  width: 100%;
+  font-size: 10px;
+}
+.box .nav_left .nav li a {
+  display: block;
+  padding: 10px 10px 10px 5px;
+}
+.box .nav_left .nav li a i {
+  padding-right: 10px;
+}
+.box .nav_left .nav li a em {
+  float: right;
+  font-family: '宋体';
+  font-weight: 700;
+}
+.box .nav_left .nav li a:hover {
+  background-color: #8463a9;
+}
+.box .header {
+  width: auto;
+  margin-left: 140px;
+  background-color: #323841;
+  height: 35px;
+  line-height: 35px;
+  color: white;
+  font-size: 12px;
+}
+.box .header .login {
+  margin-left: 10px;
+  float: left;
+}
+.box .header .login a {
+  padding: 3px 10px 3px 10px;
+  height: 15px;
+  background-color: #09b1b9;
+}
+.box .header .admin {
+  float: left;
+  margin-left: 10px;
+}
+.box .header .admin a {
+  padding: 3px 10px 3px 10px;
+  height: 15px;
+  background-color: #e14d43;
+}
+.box .header img {
+  width: 42px;
+  float: right;
+}
+.box .main {
+  width: auto;
+  margin-left: 140px;
+  background-color: #ededed;
+}
+.box .main .notice {
+  height: 30px;
+  line-height: 30px;
+  background-color: white;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.box .main .content {
+  position: relative;
+  margin: 15px 15px 0px 15px;
+  background-color: #ededed;
+  height: 800px;
+}
+.box .main .content .poster {
+  height: 88px;
+}
+.box .main .content .poster .poster_1 {
+  float: left;
+  position: relative;
+  width: 48%;
+  height: 88px;
+  background-image: url('../images/广告1.jpg');
+  background-size: 565px auto;
+  background-repeat: no-repeat;
+}
+.box .main .content .poster .poster_1 img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+.box .main .content .poster .poster_2 {
+  position: relative;
+  float: right;
+  width: 48%;
+  height: 88px;
+  background-image: url('../images/广告2.jpg');
+  background-size: 565px auto;
+  background-repeat: no-repeat;
+}
+.box .main .content .poster .poster_2 img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+.box .main .content .swiper {
+  margin: 10px 0 10px 10px;
+  width: 60%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.box .main .content .swiper ul {
+  width: 700%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+}
+.box .main .content .swiper ul li {
+  float: left;
+}
+.box .main .content .swiper ul li img {
+  width: 707px;
+  height: 250px;
+}
+.box .main .content .swiper .previous {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.box .main .content .swiper .previous i {
+  font-weight: 700;
+  margin-left: 23px;
+  line-height: 50px;
+}
+.box .main .content .swiper .next {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.box .main .content .swiper .next i {
+  font-weight: 700;
+  margin-left: 12px;
+  line-height: 50px;
+}
+.box .main .content .swiper .swiper_title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.box .main .content .swiper .swiper_title div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px;
+  display: none;
+}
+.box .main .content .Myside {
+  float: right;
+  position: relative;
+  padding: 5px;
+  left: -15px;
+  margin-top: -260px;
+  width: 35%;
+  height: 250px;
+  background-color: white;
+}
+.box .main .content .Myside img {
+  height: 115px;
+}
+.box .main .content .Myside img:nth-child(1) {
+  margin-bottom: 10px;
+}
+.box .main .content .lists {
+  margin: 0px 10px 0px 10px;
+  font-size: 14px;
+}
+.box .main .content .lists .wenzhang {
+  border: 1px solid #e1e1e1;
+  background-color: white;
+}
+.box .main .content .lists .wenzhang h4 {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+}
+.box .main .content .lists .wenzhang h4 .icon1 {
+  width: 30px;
+  height: 28px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  border-right: 1px solid #e1e1e1;
+}
+.box .main .content .lists .wenzhang ul {
+  font-size: 12px;
+  margin: 5px;
+}
+.box .main .content .lists .wenzhang ul li {
+  margin-bottom: 5px;
+}
+.box .main .content .lists .wenzhang ul li i {
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+}
+.box .main .content .lists .wenzhang ul li a {
+  display: inline-block;
+  width: 75%;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box .main .content .lists .wenzhang ul li a:hover {
+  color: #09b1b9;
+}
+.box .main .content .lists .wenzhang ul li span {
+  float: right;
+  color: red;
+}
+.box .main .content .lists .dianji {
+  border: 1px solid #e1e1e1;
+  background-color: white;
+}
+.box .main .content .lists .dianji h4 {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+}
+.box .main .content .lists .dianji h4 .icon1 {
+  width: 30px;
+  height: 28px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  border-right: 1px solid #e1e1e1;
+}
+.box .main .content .lists .dianji ul {
+  font-size: 12px;
+  margin: 5px;
+}
+.box .main .content .lists .dianji ul li {
+  margin-bottom: 5px;
+}
+.box .main .content .lists .dianji ul li i {
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+}
+.box .main .content .lists .dianji ul li a {
+  display: inline-block;
+  width: 75%;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box .main .content .lists .dianji ul li a:hover {
+  color: #09b1b9;
+}
+.box .main .content .lists .dianji ul li span {
+  float: right;
+  color: grey;
+}
+.box .main .content .lists .zixun {
+  border: 1px solid #e1e1e1;
+  background-color: white;
+}
+.box .main .content .lists .zixun h4 {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+}
+.box .main .content .lists .zixun h4 .icon1 {
+  width: 30px;
+  height: 28px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  border-right: 1px solid #e1e1e1;
+}
+.box .main .content .lists .zixun ul {
+  font-size: 12px;
+  margin: 5px;
+}
+.box .main .content .lists .zixun ul li {
+  margin-bottom: 5px;
+}
+.box .main .content .lists .zixun ul li i {
+  position: relative;
+  top: -3px;
+  margin-right: 5px;
+}
+.box .main .content .lists .zixun ul li a {
+  display: inline-block;
+  width: 75%;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box .main .content .lists .zixun ul li a:hover {
+  color: #09b1b9;
+}
+.box .main .content .lists .zixun ul li span {
+  float: right;
+  color: grey;
+}
+.box .main .content .lists .wenzhang,
+.box .main .content .lists .dianji,
+.box .main .content .lists .zixun {
+  width: 30%;
+  float: left;
+  margin-right: 4.8%;
+}
+.box .main .content .lists .wenzhang:nth-child(3),
+.box .main .content .lists .dianji:nth-child(3),
+.box .main .content .lists .zixun:nth-child(3) {
+  margin-right: 0;
+}
+.box .renwu {
+  position: fixed;
+  display: none;
+  bottom: 0;
+  right: 0;
+}
