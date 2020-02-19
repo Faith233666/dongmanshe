@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页</title>
+    <link rel="stylesheet" href="./css/base2.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <div class="header w">
+        <div class="logo">
+            <img src="./images/logo2.png" alt="">
+        </div>
+    </div>
+    <form id='form' action='' method="post">
+        <div class="zhuce w">
+            <div class="top">
+                <h2>注册新用户</h2>
+                <span class="login">我有账号,<a href="#">去登录</a> </span>
+            </div>
+            <div class="biaodan">
+                <ul>
+                    <li><label for="">手机号:</label><input type="text" id='ipt1'><span id='phone'
+                            style="color:red;margin-left: 10px;"></span></li>
+                    <li><label for="">短信验证码:</label><input type="text" id='ipt2'><span id='message'
+                            style="color:red;margin-left: 10px;"></span>
+                    </li>
+                    <li><label for="">登录密码:</label><input type="password" id='ipt3'><span id="pass"
+                            style="color:red;margin-left: 10px;"></span>
+                    </li>
+                    <li><span class="anquan">安全程度<em class="ruo">弱</em><em class="zhong">中</em><em
+                                class="qiang">强</em></span></li>
+                    <li><label for="">确认密码:</label><input type="password" id='ipt4'><span id='newpass'
+                            style="color:red;margin-left: 10px;"></span></li>
+                    <li><span class="xieyi"><input type="checkbox" class="duoxuan">同意协议并注册 <a href="#">《知晓用户协议》</a>
+                        </span></li>
+                    <li><input type="submit" value="完成注册" class="btn"></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="w">
+            <div class="mod_copyright w">
+                <div class="links">
+                    <a href="#">关于我们</a>|
+                    <a href="#">联系我们</a>|
+                    <a href="#">联系客服</a>|
+                    <a href="#">商家入驻</a>|
+                    <a href="#">营销中心</a>|
+                    <a href="#">手机品优购</a>|
+                    <a href="#">友情链接</a>|
+                    <a href="#">销售联盟</a>|
+                    <a href="#">品优购社区</a>|
+                    <a href="#">品优购公益</a>|
+                    <a href="#">English Site</a>|
+                    <a href="#" class="finally">Contact U</a>
+                </div>
+                <div class="copyright">
+                    地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn<br>
+                    京ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            const phone = document.querySelector('#phone');
+            const message = document.querySelector('#message');
+            const pass = document.querySelector('#pass');
+            const newpass = document.querySelector('#newpass');
+            const ipt1 = document.querySelector('#ipt1');
+            const ipt2 = document.querySelector('#ipt2');
+            const ipt3 = document.querySelector('#ipt3');
+            const ipt4 = document.querySelector('#ipt4');
+            const cbx = document.querySelector('[type="checkbox"]');
+            const btn = document.querySelector('.btn');
+            const form = document.querySelector('#form');
+            btn.disabled = true;
+            btn.style.background = 'grey';
+            let flag = true;
+            cbx.onclick = function () {
+                if (flag) {
+                    cbx.checked = flag;
+                    btn.style.background = 'red';
+                    btn.disabled = false;
+                } else {
+                    cbx.checked = flag;
+                    btn.style.background = 'grey';
+                    btn.disabled = true;
+                }
+                flag = !flag;
+            }
+            ipt1.onblur = function () {
+                const str = ipt1.value;
+                if (str.length > 5 || str.length < 2) {
+                    phone.innerText = "用户名应为2-5位";
+                } else {
+                    phone.innerText = "";
+                }
+            }
+            ipt2.onblur = function () {
+                const str = ipt2.value;
+                if (str.length != 4 || isNaN(str)) {
+                    message.innerText = "验证码为4位数字";
+                } else {
+                    message.innerText = "";
+                }
+            }
+            ipt3.onblur = function () {
+                const str = ipt3.value;
+                if (str.length < 6 || str.length > 16) {
+                    pass.innerText = "密码为6到16位";
+                } else {
+                    pass.innerText = "";
+                }
+            }
+            ipt4.onblur = function () {
+                const str = ipt3.value;
+                const str2 = ipt4.value;
+                if (str2.length < 6 || str2.length > 16) {
+                    newpass.innerText = "密码为6到16位";
+                } else {
+                    newpass.innerText = "";
+                }
+                if (str2 != str) {
+                    newpass.innerText = "两次输入的密码不一样";
+                }
+            }
+            let id = 0;
+            btn.onclick = function (e) {
+                // e.preventDefault();
+                if (phone.innerText == "" && message.innerText == "" && pass.innerText == "" && newpass
+                    .innerText == "") {
+                    form.action = `index.html?id=${id}`;
+                    id++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
